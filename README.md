@@ -1,5 +1,7 @@
-TellForm 2.1.EB
+TellForm 2.1.a
 ========
+
+This is a fork of EarlyBird's flavor of TellForm to be used in Aiko's prod survey server.
 
 ## EarlyBird version
 
