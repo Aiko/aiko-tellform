@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Module dependencies.
+w * Module dependencies.
  */
 var fs = require('fs'),
 	https = require('https'),
@@ -50,16 +50,15 @@ function containsAnySupportedLanguages(preferredLanguages){
 
 var fs = require('fs')
 var https = require('https')
-var pkey = fs.readFileSync('/etc/letsencrypt/live/register.earlybird.camp/privkey.pem')
-var cert = fs.readFileSync('/etc/letsencrypt/live/register.earlybird.camp/fullchain.pem')
+var pkey = fs.readFileSync('/etc/letsencrypt/live/aiko.ml/privkey.pem')
+var cert = fs.readFileSync('/etc/letsencrypt/live/aiko.ml/fullchain.pem')
 
 module.exports = function(db) {
 
 	// Initialize express app
 	var app = express();
         var serv = https.createServer({key: pkey, cert: cert}, app)
-        serv.listen(443)
-        app.get('/form', (q, s) => s.redirect('https://register.earlybird.camp/view/#!/forms/5acb2d8e541901c14fa0d907'))
+        serv.listen(6565)
 	var url = require('url');
 
 	// Globbing model files

@@ -12,8 +12,8 @@ if(!process.env.NODE_ENV){
     process.env.NODE_ENV = 'development';
 }
 
-var pkey = fs.readFileSync('/etc/letsencrypt/live/register.earlybird.camp/privkey.pem')
-var cert = fs.readFileSync('/etc/letsencrypt/live/register.earlybird.camp/fullchain.pem')
+var pkey = fs.readFileSync('/etc/letsencrypt/live/aiko.ml/privkey.pem')
+var cert = fs.readFileSync('/etc/letsencrypt/live/aiko.ml/fullchain.pem')
 
 
 require('events').EventEmitter.prototype._maxListeners = 0;
@@ -69,7 +69,7 @@ if (process.env.CREATE_ADMIN_ACCOUNT === 'TRUE') {
 require('./config/passport')();
 console.log("Got past passport!")
 // Start the app by listening on <port>
-app.listen(80, () => console.log("Listening"));
+app.listen(6564, () => console.log("Listening"));
 console.log("Got past Listen1")
 
 //https.createServer({key: pkey, cert: cert}, app).listen(config.port, () => {
